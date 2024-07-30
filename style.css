@@ -9,22 +9,22 @@
     font-family: "Poppins", sans-serif;
 }
 :root{
-    --body-color: rgba(250,250,250);
-    --color-white:  rgba(250,250,250);
-    --text-color-second:  rgba(37,37,37);
-    --first-color:  rgba(110,87,224);
+    --body-color: rgb(226, 226, 182);
+    --color-white:  rgb(226, 226, 182);
+    --text-color-second:  rgb(2, 21, 38);
+    --first-color:  rgb(110, 172, 218);
     --first-shadow:  rgba(0,0,0,0.1);
 
-    --box-color: #fff;
-    --nav-color: #fff;
-    --nav-icon: #000;
-    --logo-color: #000;
+    --box-color: #E2E2B6;
+    --nav-color: #E2E2B6;
+    --nav-icon: #021526;
+    --logo-color: #021526;
 
-    --text-color: #444444;
-    --color-white: #242526;
+    --text-color: #021526;
+    --color-white: #03346E;
 
-    --icon-color: #242526;
-    --mode-color: #ccc;
+    --icon-color: #03346E;
+    --mode-color: #E2E2B6;
 
 }
 
@@ -33,19 +33,18 @@ body{
 }
 
 /*-- dark mode--*/
-
 body.dark{
-    --body-color: #202425;
-    --box-color: #fff;
+    --body-color: #021526;
+    --box-color: #03346E;
 
-    --nav-color: #262425;   
-    --color-white:#fff;
-    --text-color: #fff;
+    --nav-color: #6EACDA;   
+    --color-white:#E2E2B6;
+    --text-color: #E2E2B6;
 
-    --nav-icon: #fff;
-    --logo-color: #fff;
-    --icon-color: #8749f2;
-    --mode-color: #fff;
+    --nav-icon: #E2E2B6;
+    --logo-color: #E2E2B6;
+    --icon-color: #E2E2B6;
+    --mode-color: #021526;
 
 }
 .container {
@@ -65,7 +64,7 @@ nav{
     height: 90px;
     line-height: 100px;
     background: var(--nav-color);
-    padding-inline: 10wv;
+    padding-inline: 10vw;
     transition: 0.5s;
     z-index: 100;
 }
@@ -119,5 +118,349 @@ nav{
     height: 2px;
     background: var(--first-color);
 }
-/*-- Mode--*/
 
+/*-- Mode--*/
+.mode {
+    display: flex;
+    align-items: center;
+    margin-right: -2%;
+}
+.moon-sun{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    cursor: pointer ;
+    background: var(--mode-color);
+}
+.moon-sun :is(#moon,#sun){
+    position: relative;
+    transition: .2s ease-in-out;
+}
+#sun {
+    opacity: 0;
+}
+body.dark #sun {
+    opacity: 1;
+}
+body.dark #moon {
+    opacity: 0;
+}
+
+/*-- wrapper--*/
+.wrapper {
+    padding-inline: 10vw;
+}
+
+/*-- Feature Box--*/
+.featured-box {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+
+/*-- Feature text--*/
+.featured-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 20px;
+    margin-top: 10%;
+}
+.featured-text .hello{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;  
+    color: var(--text-color);  
+}
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    margin-block: 20px;
+    color: #6EACDA;
+    margin-bottom: 10px ;
+}
+.typed-text {
+    font-family: sans-serif;
+    color: #6EACDA;
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.text-info {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+.text-button {
+    display: flex;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 20px;
+}
+.text-button .btn{
+    border: none;
+    color: #E2E2B6 ;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+}
+.btn {
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #6EACDA;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+.btn i {
+    margin-right: 10px;
+}
+i {
+    font-size: 16px;
+}
+.social_icons {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 5px;
+    gap: 32px;
+}
+.social_icons .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    min-height: 40px;
+    color: var(--icon-color) ;
+    border-radius: 50%;
+    box-shadow: 0px 1px 5px 3px  #03346E;
+    cursor: pointer;
+}
+
+.icon-circle {
+    position: absolute;
+    transform: transform(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    animation: iconSlide 4s infinite alternate;
+} 
+@keyframes iconSlide{
+    25%{
+        border: 2px solid #E2E2B6;
+        left: 0px;
+    }
+    50%{
+        border: 2px solid #6EACDA;
+        left: 70px;
+    }
+    75%{
+        border: 2px solid #03346E;
+        left: 145px;
+    }
+    100%{
+        border: 2px solid #021526;
+        left: 216px;
+    }
+}
+.social_icons:hover .icon-circle{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+/*-- Feature image--*/
+.featured-image {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+}
+.image{
+    margin-top: 10%;
+    width: 500px;
+    height: 700px;
+    border-radius: 40% 40% 40% 40%;
+    overflow: hidden;
+    animation: imgFloat 5s ease-in-out infinite;
+}
+.image img{
+    width: 500px;
+    min-height: 700px;
+    object-fit: cover;
+}
+@keyframes imgFloat{
+    50%{
+        transform: translateY(50px);
+    }
+}
+
+/*-     Main    -*/
+.section {
+    padding-block: 5em;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px
+}
+.col {
+    display: flex;
+    width: 50%;
+}
+.top-headder {
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-headder h1{
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/*-     About    -*/
+.about-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 40px 45px;
+    padding-inline: 35px;
+    border: 2px solid #03346E;
+    background: transparent;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    border-radius: 20px;
+}
+.about-me {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.about-info figcaption{
+    width: 100%;
+    padding: 25px;
+    position: relative;
+}
+.about-me .profile{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    z-index: 1;
+    background-color: #6EACDA;
+    max-width: 90px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.about-me h2{
+    color: var(--text-color);
+}
+.about-me p{
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+.about-info .about-me-btn{
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #03346E;
+    color: #E2E2B6;
+    margin-top: 20px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+/*-     Skills box    -*/
+.skills{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    background: transparent;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    padding: 10px 20px;
+    border: 2px solid #03346E;
+    border-radius: 20px;
+}
+.skills .skills_box{
+    width: 100%;
+    margin: 25px 0;
+}
+.skills_box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.skills_box .skills-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skills_box .skills-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #6EACDA;
+    animation: progress 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+.skills-per.html{
+    animation-delay: 0.1s;
+    width: 80%;
+}
+.skills-per.cplus{
+    animation-delay: 0.1s;
+    width: 90%;
+}
+.skills-per.Python{
+    animation-delay: 0.1s;
+    width: 63%;
+}
+.skills-per.SQL{
+    animation-delay: 0.1s;
+    width: 70%;
+}
+.skills-per.JAVA{
+    animation-delay: 0.1s;
+    width: 50%;
+}
+.skills-per.JavaScript{
+    animation-delay: 0.1s;
+    width: 52%;
+}
+
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skills-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 20px;
+    background: #03346E;
+    z-index: 1;
+}
