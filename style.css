@@ -392,56 +392,56 @@ i {
     border: 2px solid #03346E;
     border-radius: 20px;
 }
-.skills .skills_box{
+.skills .skills-box{
     width: 100%;
     margin: 25px 0;
 }
-.skills_box .title{
+.skills-box .title{
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: var(--text-color);
 }
-.skills_box .skills-bar{
+.skills-box .skills-bar{
     height: 8px;
     width: 100%;
     border-radius: 6px;
     margin-top: 6px;
     background: rgba(0,0,0,0.1);
 }
-.skills_box .skills-per{
+.skills-box .skills-per{
     position: relative;
     display: block;
     height: 100%;
-    width: 90%;
+    width: 100%;
     border-radius: 6px;
     background: #6EACDA;
     animation: progress 0.5s ease-in-out forwards;
     opacity: 0;
 }
-.skills-per.html{
+.skills-per.html {
     animation-delay: 0.1s;
     width: 80%;
 }
-.skills-per.cplus{
+.skills-per.cplus {
     animation-delay: 0.1s;
     width: 90%;
 }
-.skills-per.Python{
+.skills-per.Python {
     animation-delay: 0.1s;
-    width: 63%;
+    width: 60%;
 }
-.skills-per.SQL{
+.skills-per.SQL {
     animation-delay: 0.1s;
     width: 70%;
 }
-.skills-per.JAVA{
+.skills-per.JAVA {
     animation-delay: 0.1s;
     width: 50%;
 }
-.skills-per.JavaScript{
+.skills-per.javascript {
     animation-delay: 0.1s;
-    width: 52%;
+    width: 50%;
 }
 
 @keyframes progress{
@@ -464,3 +464,60 @@ i {
     background: #03346E;
     z-index: 1;
 }
+
+.project_container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #E2E2B6;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    overflow: hidden;
+    cursor: pointer;
+}
+.project-box i{
+    font-size: 50px;
+    color: #6EACDA;
+    margin-bottom: 25px;
+}
+.project-box label{
+    font-size: 15px;
+    color: var(--text-color);
+}
+.project-box::after,
+.contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: #6EACDA;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 0.1;
+}
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after {
+    bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box > h3,
+.project-box:hover.project-box > label{
+    color: #E2E2B6;
+    z-index: 2;
+}
+.top-headder span{
+    color: var(--text-color);
+}
+
+/*-     Contact box    -*/
