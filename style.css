@@ -15,15 +15,16 @@
     --first-color:  #F0EDCF;
     --first-shadow:  rgba(0,0,0,0.1);
 
-    --box-color: #FFDA78;
+    --box-color: #6EACDA;
     --nav-color: #0B60B0;
     --nav-icon: #021526;
     --logo-color: #F0EDCF;
+    --hover-color: #021526;
 
     --text-color: #000000;
     --color-white: #F0EDCF;
 
-    --icon-color: #000000;
+    --icon-color: #021526;
     --mode-color: #000000;
 
 }
@@ -35,11 +36,12 @@ body{
 /*-- dark mode--*/
 body.dark{
     --body-color: #070F2B;
-    --box-color: #0D7377;
+    --box-color: #000000;
 
     --nav-color: #1B1A55;   
     --color-white:#9290C3;
     --text-color: #14FFEC;
+    --hover-color: #1B1A55;
 
     --nav-icon: #14FFEC;
     --logo-color: #E2E2B6;
@@ -362,7 +364,7 @@ i {
     max-width: 90px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
-.about-me h2{
+.about-me h2, p{
     color: var(--text-color);
 }
 .about-me p{
@@ -493,6 +495,9 @@ i {
     color: #40A2D8;
     margin-bottom: 25px;
 }
+.project-box h3{
+    color: var(--text-color);
+}
 .project-box label{
     font-size: 15px;
     color: var(--text-color);
@@ -502,7 +507,7 @@ i {
     content: "";
     position: absolute;
     bottom: -100%;
-    background: #40A2D8;
+    background: var(--hover-color);
     width: 100%;
     height: 100%;
     transition: 0.5s;
@@ -683,7 +688,7 @@ textarea{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgb(226, 226, 182);
+        background: var(--box-color);
         backdrop-filter: blur(5px);
         width: 300px;
         border-radius: 0px 30px 0px 30px;
