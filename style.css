@@ -621,5 +621,69 @@ textarea{
     margin-left: 10px;
 }
 
-/*-     Footer    -*/
+/*-     Contact form    -*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: var(--body-color);
+}
+.middle-footer .footer-menu{
+    display: flex;
+}
+.footer_menu_list {
+    list-style: none;
+}
+.footer_menu_list a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.footer_menu_list a:hover{
+    color: #6EACDA;
+}
+.footer-social-icons{
+    display: flex;
+    gap: 30px;
+    color: var(--color-white);
+}
+.bottom-footer{
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--color-white);
+}
 
+/*-     Media query    -*/
+@media only screen and (mix-width: 1024px) {
+    .featured-text{
+        padding: 0;
+    }
+    .image,
+    .image img{
+        width: 320px;
+        min-height: 320px;
+    }
+}
+
+@media only screen and (mix-width: 900px) {
+    .nav-menu-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(226, 226, 182);
+        backdrop-filter: blur(5px);
+        width: 300px;
+    }
+}
