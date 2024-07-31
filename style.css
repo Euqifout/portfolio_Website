@@ -628,13 +628,13 @@ textarea{
 }
 
 /*-     Contact form    -*/
-.footer{
+footer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    background-color: var(--body-color);
+    background-color: var(--nav-color);
 }
 .middle-footer .footer-menu{
     display: flex;
@@ -656,10 +656,40 @@ textarea{
     gap: 30px;
     color: var(--icon-color);
 }
+.footer-social-icon-circle {
+    position: absolute;
+    transform: transform(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    animation: iconSlide 4s infinite alternate;
+} 
+@keyframes iconSlide{
+    25%{
+        border: 2px solid #E2E2B6;
+        left: 0px;
+    }
+    50%{
+        border: 2px solid #6EACDA;
+        left: 70px;
+    }
+    75%{
+        border: 2px solid #03346E;
+        left: 145px;
+    }
+    100%{
+        border: 2px solid #021526;
+        left: 216px;
+    }
+}
+.footer-social-social_icons:hover .footer-social-icon-circle-icon-circle{
+    animation-play-state: paused;
+    cursor: pointer;
+}
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
-    color: var(--color-white);
+    color: var(--text-color);
 }
 
 /*-     Media query    -*/
