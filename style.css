@@ -465,7 +465,7 @@ i {
     z-index: 1;
 }
 
-.project_container{
+.project-container{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -568,7 +568,7 @@ i {
     gap: 10px;
     width: 100%;
 }
-.form_inputs{
+.form-inputs{
     display: flex;
     gap: 10px;
     width: 100%;
@@ -578,7 +578,7 @@ i {
     height: 55px;
     background: transparent;
     border: 2px solid #03346E;
-    padding-inline: 20;
+    padding-inline: 20px;
     border-radius: 10px;
     outline: none;
 }
@@ -592,7 +592,7 @@ i {
     margin-bottom: 10px;
     outline: none;
 }
-.text-area{
+textarea{
     width: 100%;
     height: 250px;
     background: transparent;
@@ -603,3 +603,23 @@ i {
     outline: none;
     resize: none;
 }
+
+.form-button > .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    border: none;
+    background: #03346E;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #E2E2B6;
+}
+.form-button i{
+    font-size: 18px;
+    rotate: -45deg;
+    margin-left: 10px;
+}
+
+/*-     Footer    -*/
+
