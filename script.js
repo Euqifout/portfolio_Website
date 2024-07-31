@@ -20,7 +20,7 @@ toggleSwitch.addEventListener("click", ()=> {
 
 /*- Dark mode -*/
 var tyingEffect = new Typed(".typed-text", {
-    strings: ["Designer", "Coder", "Developer"],
+    strings: ["Designer", "Coder...", "Full Stack Dev-Ops","Analyst...", "Database Dev/Admin"],
 
     loop: true,
     typeSpeed: 100,
