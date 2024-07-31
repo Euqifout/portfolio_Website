@@ -413,35 +413,35 @@ i {
     position: relative;
     display: block;
     height: 100%;
-    width: 100%;
+    width: 90%;
     border-radius: 6px;
     background: #6EACDA;
     animation: progress 0.5s ease-in-out forwards;
     opacity: 0;
 }
-.skills-per.html {
+.html .skills-per{
     animation-delay: 0.1s;
-    width: 80%;
+    width: 75%;
 }
-.skills-per.cplus {
+.cplus .skills-per {
     animation-delay: 0.1s;
-    width: 90%;
+    width: 83%;
 }
-.skills-per.Python {
+.Python .skills-per {
     animation-delay: 0.1s;
-    width: 60%;
+    width: 67%;
 }
-.skills-per.SQL {
+.SQL .skills-per{
     animation-delay: 0.1s;
     width: 70%;
 }
-.skills-per.JAVA {
+.JAVA .skills-per {
     animation-delay: 0.1s;
     width: 50%;
 }
-.skills-per.javascript {
+.javascript .skills-per{
     animation-delay: 0.1s;
-    width: 50%;
+    width: 52%;
 }
 
 @keyframes progress{
@@ -522,7 +522,7 @@ i {
 }
 
 /*-     Contact box    -*/
-.contact_info {
+.contact-info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -539,19 +539,67 @@ i {
     cursor: pointer;
 }
 /*-     Contact box    -*/
-.contact_info > h2 {
+.contact-info > h2 {
     color: var(--text-color);
+    margin-bottom: 20px;
 }
-.contact_info > p {
+.contact-info > p {
     display: flex;
     align-items: center;
     gap: 10px;
     color: var(--text-color);
     margin-block: 5px;
 }
-.contact_info:hover.contact_info h2, 
-.contact_info:hover.contact_info p, 
-.contact_info:hover.contact_info i{
+.contact_info::after{
     color: #03346E;
+}
+.contact-info:hover.contact-info h2, 
+.contact-info:hover.contact-info p, 
+.contact-info:hover.contact-info i{
+    color: #E2E2B6;
     z-index: 2;
 } 
+
+/*-     Contact form    -*/
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form_inputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field{
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #03346E;
+    padding-inline: 20;
+    border-radius: 10px;
+    outline: none;
+}
+.input-subject{
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #03346E;
+    border-radius: 10px;
+    padding-inline: 20px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.text-area{
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #03346E;
+    padding: 15px 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+}
