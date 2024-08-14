@@ -1,3 +1,4 @@
+/*- Menu button appear and dissappear -*/
 function myMenuFunction(){
     var menuBtn = document.getElementById("myNavMenu");
 
